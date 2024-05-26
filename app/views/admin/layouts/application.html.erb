@@ -21,8 +21,8 @@
 
   <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-      <%#= render "base/header" %>
-      <%#= render "base/sidebar" %>
+      <%= render "admin/base/header" %>
+      <%= render "admin/base/sidebar" %>
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -44,17 +44,18 @@
         <!-- /.content-header -->
         <div class="content container-fluid">
           <div class="container-fluid">
+            <%= render "admin/shared/flash_message" %>
             <%= yield %>
           </div>
         </div>
       </div>
-      <%#= render "base/control_sidebar" %>
-      <%#= render "base/footer" %>
+      <%= render "admin/base/control_sidebar" %>
+      <%= render "admin/base/footer" %>
     </div>
   <!-- jQuery -->
   <script src="/assets/adminlte/plugins/jquery/jquery.min.js"></script>
   <!-- Bootstrap 4 -->
-  <script src="/assets/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <%# <script src="/assets/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script> %>
   <!-- AdminLTE App -->
   <script src="/assets/adminlte/dist/js/adminlte.min.js"></script>
   </body>

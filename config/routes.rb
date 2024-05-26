@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
-  root 'pages#home'
+  root 'homes#index'
+
+  devise_for :admin, skip: [:registrations, :passwords], controllers: {
+    sessions: 'admin/sessions'
+  }
+  namespace :admin do
+    root to: 'homes#index'
+  end
+
+  get 'pages/home'
   get 'dashboard/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

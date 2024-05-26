@@ -1,0 +1,6 @@
+<h1>Admin/Homes#index</h1>
+<p>Find me in app/views/admin/homes/index.html.erb</p>
+
+<% if admin_signed_in? %>
+  <%= link_to 'ログアウト', destroy_admin_session_path, data: { turbo_method: :delete } %>
+<% end %>

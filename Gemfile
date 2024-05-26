@@ -71,3 +71,5 @@ group :test do
 end
 
 gem "foreman", github: "ddollar/foreman"
+gem 'devise'
+gem 'devise-i18n-views'
