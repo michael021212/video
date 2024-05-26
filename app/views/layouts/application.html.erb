@@ -6,14 +6,23 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!-- Google Font: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="/assets/adminlte/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/assets/adminlte/dist/css/adminlte.min.css">
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
   <body class="hold-transition sidebar-mini">
-    <%= render "base/header" %>
-    <%= render "base/sidebar" %>
     <div class="wrapper">
+      <%= render "base/header" %>
+      <%= render "base/sidebar" %>
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -39,8 +48,14 @@
           </div>
         </div>
       </div>
+      <%= render "base/control_sidebar" %>
+      <%= render "base/footer" %>
     </div>
-    <%= render "base/footer" %>
-    <%= render "base/control_sidebar" %>
+  <!-- jQuery -->
+  <script src="/assets/adminlte/plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="/assets/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="/assets/adminlte/dist/js/adminlte.min.js"></script>
   </body>
 </html>
