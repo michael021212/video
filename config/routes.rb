@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     sessions: 'admin/sessions'
   }
   namespace :admin do
+    resources :stores
     root to: 'homes#index'
   end
 
