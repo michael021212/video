@@ -1,0 +1,27 @@
+<%= form_with(model: machine, url: admin_machines_path) do |form| %>
+  <% if machine.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(machine.errors.count, "error") %> prohibited this machine from being saved:</h2>
+
+      <ul>
+        <% machine.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :store_id, style: "display: block" %>
+    <%= form.text_field :store_id %>
+  </div>
+
+  <div>
+    <%= form.label :theme, style: "display: block" %>
+    <%= form.text_field :theme %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

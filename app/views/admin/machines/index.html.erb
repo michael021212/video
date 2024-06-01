@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Machines</h1>
+
+<%= link_to "登録", new_admin_machine_path %>
+<div id="machines">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Store ID</th>
+          <th scope="col">Theme</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @machines.each do |machine| %>
+          <tr>
+            <th scope="row"><%= machine.id %></th>
+            <td><%= machine.store_id  %></td>
+            <td><%= machine.theme %></td>
+            <td>
+              <%= link_to "詳細", admin_machine_path(machine) %>
+
+              <%= link_to "削除", admin_machine_path(machine), class: "ml-3" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

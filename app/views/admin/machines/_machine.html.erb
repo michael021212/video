@@ -1,0 +1,22 @@
+<div id="<%= dom_id machine %>">
+  <p>
+    <strong>Store ID:</strong>
+    <%= machine.store_id %>
+  </p>
+
+  <p>
+    <strong>Theme:</strong>
+    <%= machine.theme %>
+  </p>
+
+  <p>
+    <strong>Created at:</strong>
+    <%= l machine.created_at, format: :long %>
+  </p>
+
+  <p>
+    <strong>Updated at:</strong>
+    <%= l machine.updated_at, format: :long %>
+  </p>
+
+</div>
