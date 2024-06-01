@@ -1,0 +1,2 @@
+class KeywordMappingCsvHistory < ApplicationRecord
+end

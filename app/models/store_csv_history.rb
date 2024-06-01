@@ -1,0 +1,2 @@
+class StoreCsvHistory < ApplicationRecord
+end
