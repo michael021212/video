@@ -80,9 +80,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_01_013913) do
 
   create_table "stores", force: :cascade do |t|
     t.string "name", null: false
-    t.string "address", null: false
-    t.float "lan", null: false
-    t.float "lon", null: false
+    t.string "address", default: "", null: false
+    t.float "latitude", default: 0.0, null: false
+    t.float "longitude", default: 0.0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

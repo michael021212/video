@@ -1,4 +1,4 @@
-<%= form_with(model: store, url: admin_stores_path) do |form| %>
+<%= form_with(model: store, url: admin_store_path) do |form| %>
   <% if store.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(store.errors.count, "error") %> prohibited this store from being saved:</h2>
@@ -22,13 +22,13 @@
   </div>
 
   <div>
-    <%= form.label :lan, style: "display: block" %>
-    <%= form.text_field :lan %>
+    <%= form.label :latitude, style: "display: block" %>
+    <%= form.text_field :latitude %>
   </div>
 
   <div>
-    <%= form.label :lon, style: "display: block" %>
-    <%= form.text_field :lon %>
+    <%= form.label :longitude, style: "display: block" %>
+    <%= form.text_field :longitude %>
   </div>
 
   <div>

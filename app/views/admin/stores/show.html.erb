@@ -3,8 +3,8 @@
 <%= render @store %>
 
 <div>
-  <%= link_to "Edit this store", edit_store_path(@store) %> |
+  <%= link_to "Edit this store", edit_admin_store_path(@store) %> |
   <%= link_to "Back to stores", admin_stores_path %>
 
-  <%= button_to "Destroy this store", @store, method: :delete %>
+  <%= button_to "Destroy this store", admin_store_path(@store), method: :delete %>
 </div>

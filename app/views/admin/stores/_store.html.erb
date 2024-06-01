@@ -10,23 +10,23 @@
   </p>
 
   <p>
-    <strong>Lan:</strong>
-    <%= store.lan %>
+    <strong>latitude:</strong>
+    <%= store.latitude %>
   </p>
 
   <p>
-    <strong>Lon:</strong>
-    <%= store.lon %>
+    <strong>longitude:</strong>
+    <%= store.longitude %>
   </p>
 
   <p>
     <strong>Created at:</strong>
-    <%= store.created_at %>
+    <%= l store.created_at, format: :long %>
   </p>
 
   <p>
     <strong>Updated at:</strong>
-    <%= store.updated_at %>
+    <%= l store.updated_at, format: :long %>
   </p>
 
 </div>

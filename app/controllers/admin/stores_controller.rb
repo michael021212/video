@@ -25,7 +25,7 @@ class Admin::StoresController < Admin::BaseController
 
     respond_to do |format|
       if @store.save
-        format.html { redirect_to store_url(@store), notice: "Store was successfully created." }
+        format.html { redirect_to admin_store_url(@store), notice: "Store was successfully created." }
         format.json { render :show, status: :created, location: @store }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -37,8 +37,8 @@ class Admin::StoresController < Admin::BaseController
   # PATCH/PUT /admin/stores/1 or /admin/stores/1.json
   def update
     respond_to do |format|
-      if @store.update(store_params)
-        format.html { redirect_to store_url(@store), notice: "Store was successfully updated." }
+      if @store.update!(store_params)
+        format.html { redirect_to admin_store_url(@store), notice: "Store was successfully updated." }
         format.json { render :show, status: :ok, location: @store }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -65,6 +65,6 @@ class Admin::StoresController < Admin::BaseController
 
     # Only allow a list of trusted parameters through.
     def store_params
-      params.require(:store).permit(:name, :address, :lan, :lon)
+      params.require(:store).permit(:name, :address, :latitude, :longitude)
     end
 end
