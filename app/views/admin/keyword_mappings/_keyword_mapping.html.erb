@@ -1,0 +1,22 @@
+<div id="<%= dom_id keyword_mapping %>">
+  <p>
+    <strong>Keyword:</strong>
+    <%= keyword_mapping.keyword %>
+  </p>
+
+  <p>
+    <strong>Theme:</strong>
+    <%= keyword_mapping.theme %>
+  </p>
+
+  <p>
+    <strong>Created at:</strong>
+    <%= l keyword_mapping.created_at, format: :long %>
+  </p>
+
+  <p>
+    <strong>Updated at:</strong>
+    <%= l keyword_mapping.updated_at, format: :long %>
+  </p>
+
+</div>

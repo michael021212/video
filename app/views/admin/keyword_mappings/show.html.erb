@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @keyword_mapping %>
+
+<div>
+  <%= link_to "Edit this keyword_mapping", edit_admin_keyword_mapping_path(@keyword_mapping) %> |
+  <%= link_to "Back to keyword_mappings", admin_keyword_mappings_path %>
+
+  <%= button_to "Destroy this keyword_mapping", admin_keyword_mapping_path(@keyword_mapping), method: :delete %>
+</div>

@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>keyword_mappings</h1>
+
+<%= link_to "登録", new_admin_keyword_mapping_path %>
+<div id="keyword_mappings">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Keyword</th>
+          <th scope="col">Theme</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @keyword_mappings.each do |keyword_mapping| %>
+          <tr>
+            <th scope="row"><%= keyword_mapping.id %></th>
+            <td><%= keyword_mapping.keyword  %></td>
+            <td><%= keyword_mapping.theme %></td>
+            <td>
+              <%= link_to "詳細", admin_keyword_mapping_path(keyword_mapping) %>
+
+              <%= link_to "削除", admin_keyword_mapping_path(keyword_mapping), class: "ml-3" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
